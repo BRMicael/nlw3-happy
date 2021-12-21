@@ -1,0 +1,24 @@
+#page-create-orphanage{
+    display: flex;
+    min-height:100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.map-container {
+    margin: 0 0 4rem;
+}
+
+.map-container .leaflet-container {
+    border-radius: 20px 20px 0 0;
+    /*20 laterais de cima e 0 as de baixo*/
+}
+
+.map-container footer {
+    background: #F5F8FA;
+    border-radius: 0 0 20px 20px; /*aqui border-radius é embaixo, pois o footer esta em baixo e 
+    tem as bordas normais, e ele tem que ter a mesma borda do map-container*/
+}
+

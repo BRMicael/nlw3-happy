@@ -1,0 +1,124 @@
+
+
+
+#page-landing {
+    background: linear-gradient(329.54deg, #29b6d1 0%, #00c7c7 100%); /*primeiro valor graus da rotaçõa, segundo a cor e a 
+    % para indicar onde começa, terceiro a cor final e % de onde termina. (cada um desses é um argumento da função)*/
+    /* a propriedade background abrange todos os outros background com hifen*/
+
+    text-align: center;
+    min-height: 100vh; /*se passar ok, mas no minimo é 100*/
+
+    display: flex; /* os itens que há aqui dentro mesmo sendo "block" agora vão poder ficar um do lado do outro*/
+
+    /*align-items: center; alinha somente em cima e em baixo*/
+
+}
+
+#container {
+    margin: auto; /*agora o container vai ter a mesma margem tanto para cima e para baixo e para os lados*/
+    /*top, right, bottom, left*/
+
+    width: min(90%, 112rem); /*112rem = 1120px*/
+    /* nesses width o valor que for menor será aplicado, isso vai depender do tamanho da tela*/
+}
+
+.location, h1 , .visit p {
+    height: 16vh;
+}
+
+#logo {
+    animation-delay: 50ms;
+}
+
+.location {
+    animation-delay: 100ms;
+}
+
+main h1 {
+    animation-delay: 150ms;
+    font-size: clamp(4rem, 8vw, 8.4rem);
+        /*clamp(valor minimo, oq eu quero, valor maximo)*/
+}
+
+.visit p {
+    animation-delay: 200ms;
+}
+
+.visit a {
+    width: 8rem;
+    height: 8rem;
+    background: #ffd666;
+
+    border: none; /*tira a borda*/
+    border-radius: 3rem;
+
+    display: flex;
+    text-align: center; /*alinha o eixo y*/
+    justify-content: center; /*alinha o eixo x*/
+    
+    margin: auto;
+    
+    transition: background 200ms;
+    animation-delay: 250ms;
+}
+
+.visit a:hover { /*"a:hover" quando o mouse estiver em cima do a*/
+    background: #96feff;
+}
+
+
+/*desktop version*/
+/*"@" -> at rule  */
+
+@media (min-width: 760px) { /*essas mudanças só vão ser feitas para o display maior que 760*/
+    #container {
+        /* shorthand background: image repeat position / size */
+        background: url("../images/bg.svg") no-repeat 80% / clamp(30rem, 54vw, 56rem); /*80% serve para o eixo x e y*/
+        /* "../" para sair da pasta*/
+
+        padding: 5rem 2rem;
+    }
+    
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /*essas propriedades são disponiveis apenas com o grid ou flex*/
+    }
+    
+    .location, h1, .visit p { /*redefinindo o height*/
+        height: initial;
+        text-align: initial;
+    }
+
+    .location {
+        text-align: right;
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
+
+    main h1 {
+        
+        font-weight: bold;
+        width: min(300px, 80%);
+        line-height: 0.88;
+
+        margin: clamp(10%,9vh, 12%) 0 4rem;/*topo, lado, baixo*/
+    }
+
+    .visit {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
+
+    .visit p {
+        font-size: 2.4rem;
+        line-height: 1.5;
+        width: clamp(20rem, 20vw, 30rem);
+    }
+
+    .visit a {
+        margin: initial;
+    }
+}

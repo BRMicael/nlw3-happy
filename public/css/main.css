@@ -1,0 +1,54 @@
+/* O que é uma regra css?*/
+/*
+Seletor {
+    declaração
+    propriedade:valor;
+}
+*/
+
+/*cascata e especificidade
+cascata = ele considera o ultimo elemento
+especificidade = se o estilo estiver direto na tag ele vai ser usado não importa oq 
+(na vdd o "!important" no css consegue ser "mais forte").
+Dependendo da localização da tag "style" no html ela pode ser considerada primeiro ou não.
+
+algo como "id" torna o elemento mais especifico e faz com que ele seja considerado primeiro no css
+*/
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box; /*o width agora representa de borda a borda, por padrão vem "content-box"*/
+}
+
+body {
+    height: 100vh; /*"vh" viewport height*/
+    color: white;
+    /*no-repeat;*/
+    background: #EBF2F5; /*numeros hexadecimais: 0123456789ABCDEF*/
+
+    
+}
+
+:root {
+    font-size: 62.5%; /*= 10px*/
+}
+
+/*
+EM e REM:
+o EM vai usar como base o tamanho da fonte do pai
+o REM (root element) vai usar como base o tamanho da fonte do root
+1REM = 10px;
+*/
+
+
+body, input, button, textarea {
+    /*
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;  espaçamento entre as linhas
+    font-family: 'Nunito', sans-serif;
+    simplificando com o short hand:*/
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+}
+

@@ -1,0 +1,125 @@
+form {
+    width: 70rem;
+    margin: 6.4rem auto;
+    background: white;
+    border: 1px solid #D3E2E5;
+
+    border-radius: 2rem;
+
+    overflow: hidden;
+
+    padding: 8rem;
+}
+
+fieldset {
+    border: 0;
+}
+
+fieldset + fieldset { /*aplique essas propriedades e valores ao fielset que possui um irmão. (o irmão fica acima)*/
+    margin-top: 8rem;
+}
+
+fieldset legend {
+    width: 100%;
+    font-size: 3.2rem;
+    line-height: 1.5;
+
+
+    color: #5c8599;
+    font-weight: 700;
+
+    border-bottom: 1px solid #d3e2e5;
+    margin-bottom: 4rem; /*espaçamento fora da caixa*/
+    padding-bottom: 2.4rem; /*preenchimento dentro da caixa*/
+}
+
+.input-block + .input-block {
+    margin-top: 2.4rem;
+}
+
+.input-block label {
+    color: #8FA7B3;
+    margin-bottom: 0.8rem;
+    line-height: 1.5rem;
+}
+
+.input-block label span {
+    font-size: 1.4rem;
+    color: #8fa7b3;
+    margin-left: 2.4rem;
+    line-height: 1.5rem;
+}
+
+.input-block input, /*selecione os dois*/
+.input-block textarea {
+    width: 100%;
+
+    background: #f5f8fa;
+    border: 1px solid #d3e2e5;
+    border-radius: 2rem;
+
+    color: #5c8599;
+}
+
+/*a borda preta que fica ao selecionar os campos se chama outline (só pra saber mesmo)*/
+/* comandos para trabalhar com esse outline e a borda quando o campo é selecionado
+.input-block input:focus, 
+.input-block textarea:focus {
+    outline: none;
+    border: 3px solid red;
+}
+*/
+
+.input-block input { /*Há varios inputs nesses formulário*/
+    height: 6.4rem;
+    padding: 0 1.6rem;
+}
+
+.input-block textarea {
+    height: clamp(12rem, 16rem, 24rem);
+    resize: vertical; /*propriedade do textarea que perite o usuário alterar o tamanho da caixa*/
+    padding: 1.6rem;/*o espaçamento aqui dentro é importante para oq for escrito não fique colado nas bordas*/
+    line-height: 2.8rem;
+}
+
+.input-block input:valid, 
+.input-block textarea:valid {/* o valid serve pra quando o campo for preenchido e é a partir do "require" no html que
+    sabemos se o campo foi preenchido*/
+    border: 1px solid #A1E9C5;
+}
+
+.input-block.images button {
+    width: 100%;
+    height: 6.4rem;
+    border-radius: 2rem;
+    border:1px dashed #96D2F0;
+    margin-top: 2.4rem;
+    padding: 0 1.6rem;
+    background: #f5f8fa;
+    cursor: pointer;
+}
+
+.new-upload {
+    position: relative; /*ao colocar relative nessa div 
+    o absolute de baixo só fica absoluto dentro dessa div*/
+}
+
+.new-upload + .new-upload { /*margim para os button que forem adcionados*/
+    margin-top: 2.4rem;
+}
+
+.new-upload span {
+    position: absolute;
+    right: 12px;
+    bottom: 14px;
+
+    background: #FFF;
+
+    border: 1px solid #D3E2E5;
+    /*box-sizing:border-box; */
+    border-radius: 1rem;
+    display: flex;
+    padding: .6rem;
+
+    cursor: pointer;
+}
